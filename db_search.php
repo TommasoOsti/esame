@@ -38,9 +38,6 @@
         $query = $query . $localita . "')";
       }
 
-
-      echo $query;
-
   $result = mysqli_query ($conn, $query) or die ("Invalid query");
 ?>
 
