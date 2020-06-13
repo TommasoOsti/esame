@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="esame2020.css">
+
+<body>
+  <nav class="e2020-bar e2020-black">
+    <p><h1 align="center">Agenzia viaggi</h1></p>
+  </nav>
+
+  <div class="e2020-panel e2020-green">
+    <p align="center">Offerte di viaggio</p>
+  </div> 
+
+  <div class="search_div"> 
+    <form action="./db_search.php" method="post">
+      <div>
+        <label class="e2020-label-form" for="loc">Tipo località:</label>
+        <select id="loc_combo" name="localita" class="e2020-combo">
+          <option value="none" color=#00ff00>seleziona</option>
+          <option value="artistica">Città d'arte</option>
+          <option value="lago">Lago</option>
+          <option value="mare">Mare</option>
+          <option value="montagna">Montagna</option>
+        </select>
+      </div><br>
+      <div>
+        <label class="e2020-label-form" for="loc">Fascia di prezzo:</label>
+      <!--
+        <input type="number" id="pf_num" name="price_from" class="e2020-price" value="da">
+        <input type="number" id="pt_num" name="price_to" class="e2020-price" value="a">
+      -->
+        <select id="pf_combo" name="price_from" class="e2020-price">
+          <option value="0">da</option>
+          <option value="100">100€</option>
+          <option value="200">200€</option>
+          <option value="300">300€</option>
+          <option value="400">400€</option>
+          <option value="500">500€</option>
+          <option value="800">800€</option>
+          <option value="1000">1000€</option>
+        </select>
+        <select id="pt_combo" name="price_to" class="e2020-price">
+          <option value="0">a</option>
+          <option value="100">100€</option>
+          <option value="200">200€</option>
+          <option value="300">300€</option>
+          <option value="400">400€</option>
+          <option value="500">500€</option>
+          <option value="800">800€</option>
+          <option value="1000">1000€</option>
+        </select>
+      </div><br>
+      <div>
+        <input type="checkbox" name="filter_check" value="filter_available" />
+        <label for="filter_available">Visualizza offerte esaurite</label>
+      </div><br>
+      <div align="center">
+        <input type="submit" class="e2020-button " value="Cerca">
+      </div>
+    </form>     
+  </div>
+
+</body>
+</html>
+
