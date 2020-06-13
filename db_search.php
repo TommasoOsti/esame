@@ -35,8 +35,11 @@
       {
         $query = $query . " AND viaggi.destinazione IN (
         SELECT id_meta FROM mete WHERE tipo_meta='";
+        $query = $query . $localita . "')";
       }
-      $query = $query . $localita . "')";
+
+
+      echo $query;
 
   $result = mysqli_query ($conn, $query) or die ("Invalid query");
 ?>
